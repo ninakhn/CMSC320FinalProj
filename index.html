@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Final_Submission_Code (2)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Final_Submission_Code (4)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7802,7 +7802,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="DC-Felony-Sentencing-Analysis">DC Felony Sentencing Analysis<a class="anchor-link" href="#DC-Felony-Sentencing-Analysis">¶</a></h1><h2 id="Fall-2024-Data-Science-Project">Fall 2024 Data Science Project<a class="anchor-link" href="#Fall-2024-Data-Science-Project">¶</a></h2><h3 id="Authors">Authors<a class="anchor-link" href="#Authors">¶</a></h3><p>Nina Khilnani, Diya Peechara, Rahil Shiraz, Maanya Upadhyay, Saachi Samdani</p>
+<h1 id="DC-Felony-Sentencing-Analysis">DC Felony Sentencing Analysis<a class="anchor-link" href="#DC-Felony-Sentencing-Analysis">¶</a></h1><h2 id="Spring-2026-Data-Science-Project">Spring 2026 Data Science Project<a class="anchor-link" href="#Spring-2026-Data-Science-Project">¶</a></h2><h3 id="Authors">Authors<a class="anchor-link" href="#Authors">¶</a></h3><p>Nina Khilnani, Diya Peechara, Rahil Shiraz, Maanya Upadhyay, Saachi Samdani</p>
 <h3 id="Contributions">Contributions<a class="anchor-link" href="#Contributions">¶</a></h3><p>Nina Khilnani (E, F, H)
 I worked on analyzing the results from our models, like looking at how Model 4 performed when we removed some of the offense-level features. I also made some visualizations including the loss/MAE curves for the neural network, and helped write up the conclusion.</p>
 <p>Diya Peechara (A, D, G)
@@ -7811,7 +7811,7 @@ Contributed to the original project idea of analyzing bias in DC felony sentenci
 I helped with the model design side, mainly deciding on features and setting up the one-hot encoding and train/test split. Once the models were trained I ran the evaluations and compared performance across all five using MAE, RMSE, and R².</p>
 <p>Maanya Upadhyay (A, B, H)
 I helped come up with the project idea and narrow down our research questions around bias in criminal justice. On the data side I worked on loading and cleaning all three datasets, which involved a lot of dealing with missing values and making sure the categorical variables were standardized.</p>
-<p>Saachi Samdani: B, C, F
+<p>Saachi Samdani: (B, C, F)
 I contributed to the code for data curation and hypothesis testing. In terms of the written portion, I wrote the introduction, hypothesis testing, and part of both the data curation and machine learning sections.</p>
 </div>
 </div>
@@ -7823,8 +7823,7 @@ I contributed to the code for data curation and hypothesis testing. In terms of 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Introduction:</strong>
-The purpose of this project is to analyze felony sentencing in the District of Columbia using the entire data science pipeline. A main goal of the United States criminal justice system is to ensure equal protection under the law for all individuals. However, many are concerned that bias is prevalent throughout the steps of the criminal justice system, especially sentencing. We are interested in understanding whether factors such as race, gender, age, etc. are significant contributors to sentencing outcomes within D.C. Our overall topic first addresses the key attributes that influence sentencing lengths in general. While we expect attributes such as the type of offense committed or the severity of the crime to be the best predictors, we are also interested in whether or not demographic attributes have any impact on sentencing lengths or even offense types. We are also curious about general trends regarding crime, whether that be the relationship between certain demographics and qualities of a crime, or even types of crimes and their relationship with sentencing. Answering these questions are important in better understanding bias in criminal justice systems. Identifying such issues using a data driven methodology is the first step towards solving such issues.</p>
+<h2 id="Introduction:"><strong>Introduction:</strong><a class="anchor-link" href="#Introduction:">¶</a></h2><p>The purpose of this project is to analyze felony sentencing in the District of Columbia using the entire data science pipeline. A main goal of the United States criminal justice system is to ensure equal protection under the law for all individuals. However, many are concerned that bias is prevalent throughout the steps of the criminal justice system, especially sentencing. We are interested in understanding whether factors such as race, gender, age, etc. are significant contributors to sentencing outcomes within D.C. Our overall topic first addresses the key attributes that influence sentencing lengths in general. While we expect attributes such as the type of offense committed or the severity of the crime to be the best predictors, we are also interested in whether or not demographic attributes have any impact on sentencing lengths or even offense types. We are also curious about general trends regarding crime, whether that be the relationship between certain demographics and qualities of a crime, or even types of crimes and their relationship with sentencing. Answering these questions are important in better understanding bias in criminal justice systems. Identifying such issues using a data driven methodology is the first step towards solving such issues. For our analysis, we utilize data from Open Data DC, specifically the “Felony Sentences”, “Felony Crime Incidents in 2016”, and “Felony Arrest Charges in 2016” datasets.</p>
 </div>
 </div>
 </div>
@@ -7835,7 +7834,7 @@ The purpose of this project is to analyze felony sentencing in the District of C
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Data-Curation-and-Preprocessing">Data Curation and Preprocessing<a class="anchor-link" href="#Data-Curation-and-Preprocessing">¶</a></h1><p>This section cleans and preprocesses the felony sentencing dataset. We remove unnecessary columns, handle missing values, standardize categorical variables, and engineer new features such as total_fine and serve_ratio.</p>
+<h2 id="Data-Curation-and-Preprocessing"><strong>Data Curation and Preprocessing</strong><a class="anchor-link" href="#Data-Curation-and-Preprocessing">¶</a></h2><p>This section cleans and preprocesses the felony sentencing dataset. We remove unnecessary columns, handle missing values, standardize categorical variables, and engineer new features such as total_fine and serve_ratio.</p>
 </div>
 </div>
 </div>
@@ -7846,17 +7845,8 @@ The purpose of this project is to analyze felony sentencing in the District of C
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Data-Preprocessing-and-Summary-Statistics">Data Preprocessing and Summary Statistics<a class="anchor-link" href="#Data-Preprocessing-and-Summary-Statistics">¶</a></h1>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Curation</p>
+<p>The dataset we primarily use throughout the course of this project is the “Felony Sentences” dataset from Open Data DC. We selected this dataset due to our interest in learning more about the criminal justice system in the D.C. area. This dataset is also large enough for us to analyze a number of different variables, regarding demographics, different classes of offenses, as well as the resulting sentences and outcomes. The dataset is downloaded in csv format and the Python language is used for the analysis of this data. After loading the data sets, we applied a general clean_dataset() function to all 3 files, which gets rid of whitespace, converts to lowercase, and replaces spaces with underscores, removes duplicate rows, and drops rows where key identifiers are missing. Columns that have dates are parsed using pd.to_datetime(), and string columns are converted to numeric types when possible. Then, the column median replaces missing values for numeric columns and “Unknown” is put in for the non-numerical ones. Then, we standardized the main fields to all uppercase strings to remain consistent. However, the dataset included many columns that were not informative, such as rid, generic_case_id, generic_offender_id, gis_id, ad a few other id columns. Therefore, we dropped those columns and instead created 2 new columns: total_fine, the sum of vvca_amt, fine_amt, and restitution_amt to show the total financial penalty of a sentence, and serve_ratio, which is the ratio of sentence_to_serve_months to sentence_imposed_months, representing the proportion of the sentence that a defendant is expected to serve. After completing the preprocessing, we verify that the final dataset contains no null values through df.isna().sum().</p>
 <p>Import:</p>
 </div>
 </div>
@@ -8579,18 +8569,7 @@ dtype: int64
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">¶</a></h1><p>We begin by exploring relationships between demographic variables and sentencing outcomes. The following statistical tests and visualizations help determine whether variables such as gender and offense type are associated with sentencing differences.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Data-Exploration">Data Exploration<a class="anchor-link" href="#Data-Exploration">¶</a></h1>
+<h2 id="Exploratory-Data-Analysis"><strong>Exploratory Data Analysis</strong><a class="anchor-link" href="#Exploratory-Data-Analysis">¶</a></h2><p>We begin by exploring relationships between demographic variables and sentencing outcomes. The following statistical tests and visualizations help determine whether variables such as gender and offense type are associated with sentencing differences.</p>
 </div>
 </div>
 </div>
@@ -8602,6 +8581,7 @@ dtype: int64
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>We utilize three different statistical methods for initial hypothesis testing. For the first method, we use a chi squared test in order to assess the relationship between gender and offense type. The null hypothesis for this test is that the gender of the individual does not have an effect on the type of offense they commit, with the alternative hypothesis being that gender does have an effect on the type of offense. A chi squared test is used because both variables are categorical. The low resulting p-value allows us to reject the null hypothesis that the gender of the individual does not have an effect on the type of offense they commit. To supplement this test, we create a grouped bar graph that displays the number of each type of offense committed (in the dataset) among each gender. The plot reveals that a large proportion of offenses in the dataset are committed by male individuals.</p>
+<p>Learn more about chi-square tests here: <a href="https://www.jmp.com/en/statistics-knowledge-portal/linear-models/chi-square-test">https://www.jmp.com/en/statistics-knowledge-portal/linear-models/chi-square-test</a></p>
 </div>
 </div>
 </div>
@@ -9212,8 +9192,7 @@ ANOVA p-value: 0.0
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<hr/>
-<h1 id="NEW-MATERIAL,-MODEL-TRAINING,-FEATURE-ENGINEERING">NEW MATERIAL, MODEL TRAINING, FEATURE ENGINEERING<a class="anchor-link" href="#NEW-MATERIAL,-MODEL-TRAINING,-FEATURE-ENGINEERING">¶</a></h1><hr/>
+<h2 id="Primary-Analysis-and-Visualizations"><strong>Primary Analysis and Visualizations</strong><a class="anchor-link" href="#Primary-Analysis-and-Visualizations">¶</a></h2>
 </div>
 </div>
 </div>
@@ -9546,7 +9525,7 @@ First 5 rows of features after the encoding:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="splitting-the-dataset">splitting the dataset<a class="anchor-link" href="#splitting-the-dataset">¶</a></h3><p>in this section we split the data into training and testing data. Lets us train and test on different data. Prevents overfitting.</p>
+<h3 id="Splitting-the-dataset">Splitting the dataset<a class="anchor-link" href="#Splitting-the-dataset">¶</a></h3><p>In this section we split the data into training and testing data. This lets us train and test on different data, while preventing overfitting.</p>
 </div>
 </div>
 </div>
@@ -9868,6 +9847,7 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
 <p>For this section, we chose linear regression over classification or clustering. Linear regression seemed to be the most useful for a number of reasons. First, our target variable is continuous, the sentence length seems to range from 0 to 840 months. Linear regression naturally seemed better to predict the continuous variable outcomes. Secondly, our EDA showed that there was likely a linear relationship. The ANOVA test showed that the offense type had a strong effect on sentence length. For these reasons, linear regression seemed to be the best approach to predicting the variable.</p>
 <p>The first model we employ is a linear regression to predict sentence length. We start by fitting the model on the training data and then predicting the target variable using the test set. In order to evaluate the model we calculate the mean absolute error (MAE), mean squared error (MSE), root mean squared error (RMSE), and R-squared (R2). The R2 is 0.79, which means that the model explains about 79% of the variance in sentence length, which is a strong result. The MAE, 11.63 months, tells us that on average, our predictions are off by a little less than a year. This result is not negligible, but it is reasonable because the sentence lengths in the data set are from 0 to 840 months and have a standard deviation of 53 months. The RMSE, 25.37, is higher than the MAE, meaning the model makes large errors occasionally.</p>
 <p>We also chose to display the top 10 features by coefficients (absolute value) from the linear regression. These features are the ones that influence expected sentence length the most, as determined by the linear regression model.  Essentially, holding all other features constant, if a crime/observation has a specific feature (value of 1 or True for that column), the predicted sentence length in months increases by the amount of its coefficient, relative to an observation not having that feature. As seen below, the top 10 features are all related to the type of offense of the crime. The accompanying visualization plots the coefficient values of the top 20 features in order to help the reader better understand even more features that have an impact on the target variable. This plot allows the reader to see that the most important features all have to do with the type of crime committed, as expected. We expand on these results with the subsequent models.</p>
+<p>Read more about Random Forests: <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html">https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html</a></p>
 </div>
 </div>
 </div>
@@ -10300,7 +10280,7 @@ R-squared (R2): 0.81
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>here we are going to make a prediction sentence for a hypothetical new input.</p>
+<p>Here we are going to make a prediction sentence for a hypothetical new input.</p>
 </div>
 </div>
 </div>
@@ -10923,20 +10903,6 @@ First 5 rows of broader features after encoding:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span> 
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -10944,7 +10910,7 @@ First 5 rows of broader features after encoding:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>split this new and broader feature set into training and testing sets</p>
+<p>Splot this new and broader feature set into training and testing sets</p>
 </div>
 </div>
 </div>
@@ -10994,7 +10960,7 @@ Testing target shape (broader): (4936,)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>train a Lin Reg model using broader features and evaluate performance</p>
+<p>Train a linear regression model using broader features and evaluate performance</p>
 </div>
 </div>
 </div>
@@ -11648,7 +11614,7 @@ First 5 rows of features after encoding:
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>again split the data into training and testing sets for the serve_ratio prediction.</p>
+<p>Again, split the data into training and testing sets for the serve_ratio prediction.</p>
 </div>
 </div>
 </div>
@@ -11698,7 +11664,7 @@ Testing target shape: (4936,)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>train a Linear Regression model to predict the serve_ratio and evaluate its performance</p>
+<p>Train a Linear Regression model to predict the serve_ratio and evaluate its performance</p>
 </div>
 </div>
 </div>
@@ -12043,244 +12009,29 @@ Passing `palette` without assigning `hue` is deprecated and will be removed in v
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Insights and Conclusion
-To answer our core research questions, we trained five models on the DC Felony Sentencing dataset.</p>
+<h2 id="Insights-and-Conclusion"><strong>Insights and Conclusion</strong><a class="anchor-link" href="#Insights-and-Conclusion">¶</a></h2><p>To answer our core research questions, we trained five models on the DC Felony Sentencing dataset.</p>
 <p>Following are the key insights we found:</p>
-<p>Offense type and severity are the dominant predictors of sentence length. This did not surprise us, as severity and type of offense naturally predict sentence length. Every model we trained reflected this, the features related to the severity of the crime were consistently the most influential in predicting sentence length. This is what we initially expected and also shows that the legal system is working as intended for DC sentences.
-Removing offense-level features significantly weakens predictions. Model 4, which we trained very similar to Model 1 except for the fact that it only included broader features, showed a drop in R2 from 0.79 to 0.73, which means that demographic variables like race, gender, and age do influence the variance in sentence length.
-All three types of models perform consistently. Linear regression, random forest, and the neural network achieved R2 values of 0.79, 0.80, and 0.81 respectively, with RMSE values ranging between 24 and 25 months. The fact that these models performed almost identically proves that the relationships in the data are mostly linear.
-Serve ratio is predictable. Model 5 had the highest performance by far. This means that given the features available, we can predict the proportion of a sentence the defendant will actually end up serving with very high accuracy.</p>
-<p>Limitations
-Correlation is not causation. The fact that demographic variables seem to change the models does not mean that the judges are making decisions based on race or gender. There may be confounding variables that we have not analyzed that end up changing our results.
+<p>Offense type and severity are the dominant predictors of sentence length. This did not surprise us, as severity and type of offense naturally predict sentence length. Every model we trained reflected this, the features related to the severity of the crime were consistently the most influential in predicting sentence length. This is what we initially expected and also shows that the legal system is working as intended for DC sentences.</p>
+<p>Removing offense-level features significantly weakens predictions. Model 4, which we trained very similar to Model 1 except for the fact that it only included broader features, showed a drop in R2 from 0.79 to 0.73, which means that demographic variables like race, gender, and age do influence the variance in sentence length.</p>
+<p>All three types of models perform consistently. Linear regression, random forest, and the neural network achieved R2 values of 0.79, 0.80, and 0.81 respectively, with RMSE values ranging between 24 and 25 months. The fact that these models performed almost identically proves that the relationships in the data are mostly linear.</p>
+<p>Serve ratio is predictable. Model 5 had the highest performance by far. This means that given the features available, we can predict the proportion of a sentence the defendant will actually end up serving with very high accuracy.</p>
+<p>Limitations</p>
+<p>Correlation is not causation. The fact that demographic variables seem to change the models does not mean that the judges are making decisions based on race or gender. There may be confounding variables that we have not analyzed that end up changing our results.
 This dataset only covers the DC area. Our findings are specific to this area so we cannot generalize them to other jurisdictions which have different guidelines or sentencing.
 Missing data changes our information. The missing values were filled with column medians and categorical missing values were filled with “Unknown.” This may change the model performance, especially for columns where there is a lot of missing data (like homicide_type).
 Arrests and crimes datasets were not used in final models. While we loaded and cleaned these datasets with the intention of merging them with the sentencing datasets, time constraints limited our ability to merge them with sentencing data. Incorporating these datasets in the future can tell us much more about the context of the crimes and how sentences ended up.</p>
-<p>Conclusion
-At the start of this project, we wanted to answer two major questions:
+<p>Conclusion</p>
+<p>At the start of this project, we wanted to answer two major questions:
 (1) what factors most strongly influence felony sentencing outcomes in DC? And
 (2) do demographic characteristics play a role in sentencing outcomes?
 Our project clearly answers both of these questions.</p>
 <p>Offense type and severity are the strongest predictors of sentence length, but they do not account for the entire outcome. Our hypothesis tests showed us that there were statistically significant differences in sentencing outcomes across gender groups even when the sentences had the same offense categories. While we cannot conclude the reason for this bias, the patterns that we found are consistent with broader concerns about fairness in the criminal justice system and if we had more time, this is something we would research further.</p>
 <p>The most surprising outcome of our project is how predictable the serve ratio is. The R2 value of 0.97 suggests that once the sentence is handed, how much of it the defendant actually serves is determined by rule-based factors. By contrast, the sentence length itself has some variance that is explained by demographic factors.</p>
 <p>We believe that analyzing this issue with data is a good starting point for actually understanding and investigating these issues in the legal system. By making our methodology transparent, we hope that this is reproducible and others can further our research about the power and responsibility that can be made clear by data science.</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="err">!</span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">html</span> <span class="s2">"/content/Final Submission Code.ipynb"</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>[NbConvertApp] WARNING | pattern '/content/Final Submission Code.ipynb' matched no files
-This application is used to convert notebook files (*.ipynb)
-        to various other formats.
-
-        WARNING: THE COMMANDLINE INTERFACE MAY CHANGE IN FUTURE RELEASES.
-
-Options
-=======
-The options below are convenience aliases to configurable class-options,
-as listed in the "Equivalent to" description-line of the aliases.
-To see all configurable class-options for some &lt;cmd&gt;, use:
-    &lt;cmd&gt; --help-all
-
---debug
-    set log level to logging.DEBUG (maximize logging output)
-    Equivalent to: [--Application.log_level=10]
---show-config
-    Show the application's configuration (human-readable format)
-    Equivalent to: [--Application.show_config=True]
---show-config-json
-    Show the application's configuration (json format)
-    Equivalent to: [--Application.show_config_json=True]
---generate-config
-    generate default config file
-    Equivalent to: [--JupyterApp.generate_config=True]
--y
-    Answer yes to any questions instead of prompting.
-    Equivalent to: [--JupyterApp.answer_yes=True]
---execute
-    Execute the notebook prior to export.
-    Equivalent to: [--ExecutePreprocessor.enabled=True]
---allow-errors
-    Continue notebook execution even if one of the cells throws an error and include the error message in the cell output (the default behaviour is to abort conversion). This flag is only relevant if '--execute' was specified, too.
-    Equivalent to: [--ExecutePreprocessor.allow_errors=True]
---stdin
-    read a single notebook file from stdin. Write the resulting notebook with default basename 'notebook.*'
-    Equivalent to: [--NbConvertApp.from_stdin=True]
---stdout
-    Write notebook output to stdout instead of files.
-    Equivalent to: [--NbConvertApp.writer_class=StdoutWriter]
---inplace
-    Run nbconvert in place, overwriting the existing notebook (only
-            relevant when converting to notebook format)
-    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory=]
---clear-output
-    Clear output of current file and save in place,
-            overwriting the existing notebook.
-    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory= --ClearOutputPreprocessor.enabled=True]
---coalesce-streams
-    Coalesce consecutive stdout and stderr outputs into one stream (within each cell).
-    Equivalent to: [--NbConvertApp.use_output_suffix=False --NbConvertApp.export_format=notebook --FilesWriter.build_directory= --CoalesceStreamsPreprocessor.enabled=True]
---no-prompt
-    Exclude input and output prompts from converted document.
-    Equivalent to: [--TemplateExporter.exclude_input_prompt=True --TemplateExporter.exclude_output_prompt=True]
---no-input
-    Exclude input cells and output prompts from converted document.
-            This mode is ideal for generating code-free reports.
-    Equivalent to: [--TemplateExporter.exclude_output_prompt=True --TemplateExporter.exclude_input=True --TemplateExporter.exclude_input_prompt=True]
---allow-chromium-download
-    Whether to allow downloading chromium if no suitable version is found on the system.
-    Equivalent to: [--WebPDFExporter.allow_chromium_download=True]
---disable-chromium-sandbox
-    Disable chromium security sandbox when converting to PDF..
-    Equivalent to: [--WebPDFExporter.disable_sandbox=True]
---show-input
-    Shows code input. This flag is only useful for dejavu users.
-    Equivalent to: [--TemplateExporter.exclude_input=False]
---embed-images
-    Embed the images as base64 dataurls in the output. This flag is only useful for the HTML/WebPDF/Slides exports.
-    Equivalent to: [--HTMLExporter.embed_images=True]
---sanitize-html
-    Whether the HTML in Markdown cells and cell outputs should be sanitized..
-    Equivalent to: [--HTMLExporter.sanitize_html=True]
---log-level=&lt;Enum&gt;
-    Set the log level by value or name.
-    Choices: any of [0, 10, 20, 30, 40, 50, 'DEBUG', 'INFO', 'WARN', 'ERROR', 'CRITICAL']
-    Default: 30
-    Equivalent to: [--Application.log_level]
---config=&lt;Unicode&gt;
-    Full path of a config file.
-    Default: ''
-    Equivalent to: [--JupyterApp.config_file]
---to=&lt;Unicode&gt;
-    The export format to be used, either one of the built-in formats
-            ['asciidoc', 'custom', 'html', 'latex', 'markdown', 'notebook', 'pdf', 'python', 'qtpdf', 'qtpng', 'rst', 'script', 'slides', 'webpdf']
-            or a dotted object name that represents the import path for an
-            ``Exporter`` class
-    Default: ''
-    Equivalent to: [--NbConvertApp.export_format]
---template=&lt;Unicode&gt;
-    Name of the template to use
-    Default: ''
-    Equivalent to: [--TemplateExporter.template_name]
---template-file=&lt;Unicode&gt;
-    Name of the template file to use
-    Default: None
-    Equivalent to: [--TemplateExporter.template_file]
---theme=&lt;Unicode&gt;
-    Template specific theme(e.g. the name of a JupyterLab CSS theme distributed
-    as prebuilt extension for the lab template)
-    Default: 'light'
-    Equivalent to: [--HTMLExporter.theme]
---sanitize_html=&lt;Bool&gt;
-    Whether the HTML in Markdown cells and cell outputs should be sanitized.This
-    should be set to True by nbviewer or similar tools.
-    Default: False
-    Equivalent to: [--HTMLExporter.sanitize_html]
---writer=&lt;DottedObjectName&gt;
-    Writer class used to write the
-                                        results of the conversion
-    Default: 'FilesWriter'
-    Equivalent to: [--NbConvertApp.writer_class]
---post=&lt;DottedOrNone&gt;
-    PostProcessor class used to write the
-                                        results of the conversion
-    Default: ''
-    Equivalent to: [--NbConvertApp.postprocessor_class]
---output=&lt;Unicode&gt;
-    Overwrite base name use for output files.
-                Supports pattern replacements '{notebook_name}'.
-    Default: '{notebook_name}'
-    Equivalent to: [--NbConvertApp.output_base]
---output-dir=&lt;Unicode&gt;
-    Directory to write output(s) to. Defaults
-                                  to output to the directory of each notebook. To recover
-                                  previous default behaviour (outputting to the current
-                                  working directory) use . as the flag value.
-    Default: ''
-    Equivalent to: [--FilesWriter.build_directory]
---reveal-prefix=&lt;Unicode&gt;
-    The URL prefix for reveal.js (version 3.x).
-            This defaults to the reveal CDN, but can be any url pointing to a copy
-            of reveal.js.
-            For speaker notes to work, this must be a relative path to a local
-            copy of reveal.js: e.g., "reveal.js".
-            If a relative path is given, it must be a subdirectory of the
-            current directory (from which the server is run).
-            See the usage documentation
-            (https://nbconvert.readthedocs.io/en/latest/usage.html#reveal-js-html-slideshow)
-            for more details.
-    Default: ''
-    Equivalent to: [--SlidesExporter.reveal_url_prefix]
---nbformat=&lt;Enum&gt;
-    The nbformat version to write.
-            Use this to downgrade notebooks.
-    Choices: any of [1, 2, 3, 4]
-    Default: 4
-    Equivalent to: [--NotebookExporter.nbformat_version]
-
-Examples
---------
-
-    The simplest way to use nbconvert is
-
-            &gt; jupyter nbconvert mynotebook.ipynb --to html
-
-            Options include ['asciidoc', 'custom', 'html', 'latex', 'markdown', 'notebook', 'pdf', 'python', 'qtpdf', 'qtpng', 'rst', 'script', 'slides', 'webpdf'].
-
-            &gt; jupyter nbconvert --to latex mynotebook.ipynb
-
-            Both HTML and LaTeX support multiple output templates. LaTeX includes
-            'base', 'article' and 'report'.  HTML includes 'basic', 'lab' and
-            'classic'. You can specify the flavor of the format used.
-
-            &gt; jupyter nbconvert --to html --template lab mynotebook.ipynb
-
-            You can also pipe the output to stdout, rather than a file
-
-            &gt; jupyter nbconvert mynotebook.ipynb --stdout
-
-            PDF is generated via latex
-
-            &gt; jupyter nbconvert mynotebook.ipynb --to pdf
-
-            You can get (and serve) a Reveal.js-powered slideshow
-
-            &gt; jupyter nbconvert myslides.ipynb --to slides --post serve
-
-            Multiple notebooks can be given at the command line in a couple of
-            different ways:
-
-            &gt; jupyter nbconvert notebook*.ipynb
-            &gt; jupyter nbconvert notebook1.ipynb notebook2.ipynb
-
-            or you can specify the notebooks list in a config file, containing::
-
-                c.NbConvertApp.notebooks = ["my_notebook.ipynb"]
-
-            &gt; jupyter nbconvert --config mycfg.py
-
-To see all available configurables, use `--help-all`.
-
-</pre>
-</div>
+<p>Citations</p>
+<p>U.S. Government. (2018). Felony Arrest Charges in 2016 [Dataset]. Data.gov. District of Columbia Metropolitan Police Department. <a href="https://catalog.data.gov/dataset/felony-arrest-charges-in-2016-93a53">https://catalog.data.gov/dataset/felony-arrest-charges-in-2016-93a53</a></p>
+<p>U.S. Government. (2018). Felony Crime Incidents in 2016 [Dataset]. Data.gov. District of Columbia Metropolitan Police Department. <a href="https://catalog.data.gov/dataset/felony-crime-incidents-in-2016-02202">https://catalog.data.gov/dataset/felony-crime-incidents-in-2016-02202</a></p>
+<p>U.S. Government. (2025). Felony Sentences [Dataset]. Data.gov. District of Columbia Sentencing Commission. <a href="https://catalog.data.gov/dataset/felony-sentences-0299e">https://catalog.data.gov/dataset/felony-sentences-0299e</a></p>
 </div>
 </div>
 </div>
